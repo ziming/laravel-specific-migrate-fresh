@@ -1,6 +1,5 @@
 <?php
 
-// config for Ziming/SpecificMigrateFresh
 return [
 
     /*
@@ -14,17 +13,17 @@ return [
     /*
      * This will be used if mode is 'exclude'.
      *
-     * If mode is exclude, the database tables and views in this array will be excluded
+     * If mode is 'exclude', the database tables in this array will be excluded
      * from getting dropped.
      */
     'excluded_tables' => [
-
+        //
     ],
 
     /*
      * This will be used if mode is 'include'.
      *
-     * If mode is include, only the database tables and views in this array will be dropped
+     * If mode is 'include', only the database tables in this array will be dropped
      */
     'included_tables' => [
         //
