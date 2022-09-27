@@ -4,9 +4,9 @@ namespace Ziming\SpecificMigrateFresh;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Ziming\SpecificMigrateFresh\Commands\SpecificMigrateFreshCommand;
+use Ziming\SpecificMigrateFresh\Commands\LaravelSpecificMigrateFreshCommand;
 
-class SpecificMigrateFreshServiceProvider extends PackageServiceProvider
+class LaravelSpecificMigrateFreshServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -18,6 +18,6 @@ class SpecificMigrateFreshServiceProvider extends PackageServiceProvider
         $package
             ->name('specific-migrate-fresh')
             ->hasConfigFile()
-            ->hasCommand(SpecificMigrateFreshCommand::class);
+            ->hasCommand(LaravelSpecificMigrateFreshCommand::class);
     }
 }

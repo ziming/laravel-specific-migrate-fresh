@@ -4,9 +4,9 @@
     "keywords": [
         "ziming",
         "laravel",
-        "specific-migrate-fresh"
+        "laravel-specific-migrate-fresh"
     ],
-    "homepage": "https://github.com/ziming/specific-migrate-fresh",
+    "homepage": "https://github.com/ziming/laravel-specific-migrate-fresh",
     "license": "MIT",
     "authors": [
         {
@@ -61,7 +61,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Ziming\\SpecificMigrateFresh\\SpecificMigrateFreshServiceProvider"
+                "LaravelSpecificMigrateFreshServiceProvider"
             ],
             "aliases": {
                 "SpecificMigrateFresh": "Ziming\\SpecificMigrateFresh\\Facades\\SpecificMigrateFresh"

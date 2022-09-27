@@ -16,13 +16,13 @@ Donations are welcomed.
 You can install the package via composer:
 
 ```bash
-composer require ziming/specific-migrate-fresh
+composer require ziming/laravel-specific-migrate-fresh
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="specific-migrate-fresh-config"
+php artisan vendor:publish --tag="laravel-specific-migrate-fresh-config"
 ```
 
 This is the contents of the published config file:

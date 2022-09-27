@@ -7,7 +7,7 @@ use Illuminate\Console\ConfirmableTrait;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
-class SpecificMigrateFreshCommand extends Command
+class LaravelSpecificMigrateFreshCommand extends Command
 {
     use ConfirmableTrait;
 
