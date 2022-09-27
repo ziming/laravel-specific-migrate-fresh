@@ -11,9 +11,9 @@ class LaravelSpecificMigrateFreshCommand extends Command
 {
     use ConfirmableTrait;
 
-    public $signature = 'specific-migrate-fresh {--seed}';
+    public $signature = 'migrate:specific-fresh {--seed}';
 
-    public $description = 'Command to migrate:fresh for only the tables and views you wanted.';
+    public $description = 'Command to migrate:fresh for only the tables you wanted.';
 
     public function handle(): int
     {

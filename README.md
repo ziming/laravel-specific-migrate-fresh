@@ -65,10 +65,40 @@ Go to the config file, choose your preferred mode ('exclude' or 'include).
 
 Fill in the relevant array ('excluded_tables' or 'included_tables').
 
+Go to your migrations and for the tables you do not want to drop, in the up() method, add in a conditional check
+to skip the migration if the table still exists.
+
+```php
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        if (Schema::hasTable('some_giant_table_i_do_not_want_to_drop')) {
+            return;
+        }
+
+        Schema::create('some_giant_table_i_do_not_want_to_drop', function (Blueprint $table) {
+            $table->id();
+            // Other columns
+        }
+}
+```
+
 And call the command below. The `--seed` option is optional. 
 
 ```bash
-php artisan specific-migrate-fresh --seed
+php artisan migrate:specific-fresh --seed
 ```
 
 The end of this command simply just call the `php artisan migrate --seed` command at the end.
