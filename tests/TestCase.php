@@ -4,7 +4,7 @@ namespace Ziming\LaravelSpecificMigrateFresh\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Ziming\SpecificMigrateFresh\LaravelSpecificMigrateFreshServiceProvider;
+use Ziming\LaravelSpecificMigrateFresh\LaravelSpecificMigrateFreshServiceProvider;
 
 class TestCase extends Orchestra
 {
