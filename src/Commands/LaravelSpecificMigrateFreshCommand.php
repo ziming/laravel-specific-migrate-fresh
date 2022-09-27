@@ -1,6 +1,6 @@
 <?php
 
-namespace Ziming\SpecificMigrateFresh\Commands;
+namespace Ziming\LaravelSpecificMigrateFresh\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;

@@ -36,13 +36,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Ziming\\SpecificMigrateFresh\\": "src",
-            "Ziming\\SpecificMigrateFresh\\Database\\Factories\\": "database/factories"
+            "Ziming\\LaravelSpecificMigrateFresh\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Ziming\\SpecificMigrateFresh\\Tests\\": "tests"
+            "Ziming\\LaravelSpecificMigrateFresh\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -62,10 +61,7 @@
         "laravel": {
             "providers": [
                 "LaravelSpecificMigrateFreshServiceProvider"
-            ],
-            "aliases": {
-                "SpecificMigrateFresh": "Ziming\\SpecificMigrateFresh\\Facades\\SpecificMigrateFresh"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
