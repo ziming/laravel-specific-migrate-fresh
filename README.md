@@ -19,13 +19,6 @@ You can install the package via composer:
 composer require ziming/specific-migrate-fresh
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="specific-migrate-fresh-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash

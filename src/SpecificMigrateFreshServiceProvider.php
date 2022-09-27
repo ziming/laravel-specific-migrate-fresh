@@ -18,8 +18,6 @@ class SpecificMigrateFreshServiceProvider extends PackageServiceProvider
         $package
             ->name('specific-migrate-fresh')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_specific-migrate-fresh_table')
             ->hasCommand(SpecificMigrateFreshCommand::class);
     }
 }
