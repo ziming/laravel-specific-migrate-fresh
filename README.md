@@ -1,9 +1,9 @@
 # Laravel Specific Migrate:Fresh
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/ziming/specific-migrate-fresh.svg?style=flat-square)](https://packagist.org/packages/ziming/specific-migrate-fresh)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/ziming/specific-migrate-fresh/run-tests?label=tests)](https://github.com/ziming/specific-migrate-fresh/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/ziming/specific-migrate-fresh/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/ziming/specific-migrate-fresh/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/ziming/specific-migrate-fresh.svg?style=flat-square)](https://packagist.org/packages/ziming/specific-migrate-fresh)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/ziming/laravel-specific-migrate-fresh.svg?style=flat-square)](https://packagist.org/packages/ziming/specific-migrate-fresh)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/ziming/laravel-specific-migrate-fresh/run-tests?label=tests)](https://github.com/ziming/specific-migrate-fresh/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/laravel-ziming/specific-migrate-fresh/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/ziming/specific-migrate-fresh/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/ziming/laravel-specific-migrate-fresh.svg?style=flat-square)](https://packagist.org/packages/ziming/specific-migrate-fresh)
 
 Want `php artisan migrate:fresh` but not drop all the tables? This is for you.
 
