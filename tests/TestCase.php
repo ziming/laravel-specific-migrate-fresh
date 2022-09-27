@@ -2,7 +2,6 @@
 
 namespace Ziming\LaravelSpecificMigrateFresh\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Ziming\LaravelSpecificMigrateFresh\LaravelSpecificMigrateFreshServiceProvider;
 
@@ -11,10 +10,6 @@ class TestCase extends Orchestra
     protected function setUp(): void
     {
         parent::setUp();
-
-        Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Ziming\\SpecificMigrateFresh\\Database\\Factories\\'.class_basename($modelName).'Factory'
-        );
     }
 
     protected function getPackageProviders($app)
