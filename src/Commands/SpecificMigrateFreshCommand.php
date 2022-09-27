@@ -38,6 +38,7 @@ class SpecificMigrateFreshCommand extends Command
     {
         $excludedTables = config('specific-migrate-fresh.excluded_tables');
 
+        // @phpstan-ignore-next-line
         $tablesToDrop = DB::connection()->getDoctrineSchemaManager()->listTableNames();
 
         $tablesToDrop = array_diff($tablesToDrop, $excludedTables);
