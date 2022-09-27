@@ -106,7 +106,7 @@ The end of this command simply just call the `php artisan migrate --seed` comman
 If you do not want to call your DatabaseSeeder. Leave out `--seed` from your command.
 
 ```bash
-php artisan specific-migrate-fresh
+php artisan migrate:specific-fresh
 ```
 
 ## Testing
