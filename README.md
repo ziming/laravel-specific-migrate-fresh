@@ -61,12 +61,13 @@ return [
 
 ## Usage
 
-Go to the config file, choose your preferred mode ('exclude' or 'include).
+Go to the config file, choose your preferred mode ('exclude' or 'include').
 
 Fill in the relevant array ('excluded_tables' or 'included_tables').
 
 Go to your migrations and for the tables you do not want to drop, in the up() method, add in a conditional check
-to skip the migration if the table still exists.
+to skip the migration if the table still exists. You need to do this so that `php artisan migrate` will not
+throw an error about the table or column already exist later.
 
 ```php
 <?php
