@@ -4,14 +4,18 @@ namespace Ziming\LaravelSpecificMigrateFresh\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
+use Illuminate\Database\Console\Migrations\FreshCommand;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
-class LaravelSpecificMigrateFreshCommand extends Command
+class LaravelSpecificMigrateFreshCommand extends FreshCommand
 {
-    use ConfirmableTrait;
-
-    public $signature = 'migrate:specific-fresh {--seed}';
+    protected $signature = 'migrate:specific-fresh
+                                {--seed : Indicates if the seed task should be re-run}
+                                {--model=* : Class names of the models to be dropped}
+                                {--except=* : Class names of the models to be excluded from dropped after reading the config file}
+                                {--chunk=1000 : The number of models to retrieve per chunk of models to be deleted}
+                                {--pretend : Display the number of prunable records found instead of deleting them}';
 
     public $description = 'Command to migrate:fresh for only the tables you wanted.';
 
@@ -29,6 +33,7 @@ class LaravelSpecificMigrateFreshCommand extends Command
 
         $this->call('migrate', [
             '--seed' => $this->option('seed'),
+            '--pretend' => $this->option('pretend'),
         ]);
 
         return self::SUCCESS;
