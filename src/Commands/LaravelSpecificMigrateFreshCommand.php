@@ -38,8 +38,10 @@ class LaravelSpecificMigrateFreshCommand extends Command
     {
         $excludedTables = config('specific-migrate-fresh.excluded_tables');
 
-        // @phpstan-ignore-next-line
-        $tablesToDrop = DB::connection()->getDoctrineSchemaManager()->listTableNames();
+        $tablesToDrop = method_exists(Schema::getFacadeRoot(), 'getTableListing')
+            ? Schema::getTableListing()
+            // @phpstan-ignore-next-line
+            : DB::connection()->getDoctrineSchemaManager()->listTableNames();
 
         $tablesToDrop = array_diff($tablesToDrop, $excludedTables);
 
