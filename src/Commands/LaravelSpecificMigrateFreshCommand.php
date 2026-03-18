@@ -4,7 +4,6 @@ namespace Ziming\LaravelSpecificMigrateFresh\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class LaravelSpecificMigrateFreshCommand extends Command
@@ -38,10 +37,7 @@ class LaravelSpecificMigrateFreshCommand extends Command
     {
         $excludedTables = config('specific-migrate-fresh.excluded_tables');
 
-        $tablesToDrop = method_exists(Schema::getFacadeRoot(), 'getTableListing')
-            ? Schema::getTableListing()
-            // @phpstan-ignore-next-line
-            : DB::connection()->getDoctrineSchemaManager()->listTableNames();
+        $tablesToDrop = Schema::getTableListing();
 
         $tablesToDrop = array_diff($tablesToDrop, $excludedTables);
 
